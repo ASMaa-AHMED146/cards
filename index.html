@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="code.css">
+    <title>my cards</title>
+</head>
+<body>
+    <div class="container">
+        <form action="">
+            <div class="cardholder-name">
+                <label for="">CARDHOLDER NAME</label>
+                <input type="text" placeholder="e.g.JaneAppleseed" >
+                <div class="error">this field is required</div>
+            </div>
+            <div class="card-num">
+                <label for="">CARD NUMBER</label>
+                <input type="text" placeholder="9591 6489 6389 101E" >
+                <div class="error">this field is required</div>
+                <div class="mistake">Wrong format, numbers only</div>
+
+            </div>
+            <div class="date">
+                <div class="up">
+                    <label for="">EXP.DATE(MM/YY)</label>
+                    <label for="">CVC</label>
+                </div>
+                <div class="down">
+                    <div class="month">
+                    <input id="month" type="text" placeholder="MM" >
+                    <div class="error">this field is required</div>
+                    <div class="mistake month">Wrong format,one number or one only</div>
+                    </div>
+                    <div class="year"><input id="year" type="text" placeholder="YY" ></div>
+                    <div class="cv">
+                    <input id="cv" type="text" placeholder="e.g.123" >
+                    <div class="error cv1">this field is required</div>
+                    <div class="mistake cv2">Wrong format, numbers only</div>
+                     </div>
+                </div>
+            </div>
+            <button>Confirm</button>
+        </form>   
+    </div>
+
+    <div class="left"></div>
+
+    <div class="card1">
+        <div class="id">9591 6489 6389 101E</div>
+        <div class="details">
+            <div class="name">FELICIA LEIRE</div>
+            <div class="date">09/00</div>
+        </div>
+    </div>
+    <div class="card2">
+        <div class="num">000</div>
+    </div>
+    <script src="code.js"></script>
+</body>
+</html>

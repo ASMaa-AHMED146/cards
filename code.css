@@ -1,0 +1,204 @@
+*{  box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body
+{
+    /* background-color: #eee; */
+    width: 100%;
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+}
+ .container
+{
+    position: relative;
+    top: 300px;
+    left: 700px;
+    width: 500px;
+    z-index: 4;
+    padding: 30px 80px;
+} 
+.container form{
+    width: 100%;
+}
+.cardholder-name,
+.card-num
+{
+    display: flex;
+    flex-direction: column;
+    font-size: 15px;
+    padding: 8px;
+    width: 300px;
+    outline: none;
+    border: none;
+}
+.cardholder-name input,
+.card-num input 
+{   margin-top: 6px;
+    border-radius: 4px;
+    border: 1px solid #eee;
+    font-size: 15px;
+    padding: 8px;
+    background-color: transparent;
+
+}
+.cardholder-name label,
+.card-num label ,
+.date label
+{
+    font-size: 12px;
+} 
+.left
+{   position: fixed;
+    top: 0;
+    left: 0;
+    width: 30%;
+    height: 100%;
+    background-image: linear-gradient(45deg,rgb(162, 0, 255),rgb(204, 0, 255),rgb(128, 0, 255),rgba(0, 132, 255, 0.297));
+}
+.container .date .up
+{
+    display: flex;
+    gap: 50px ;
+}
+.container .date .down
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+.container .date .down #month,
+.container .date .down #year
+{
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+    border: 1px solid #eee;
+    width: 50px;
+    /* margin-top: 10px; */
+}
+.container .date .down #cv
+{
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+    border: 1px solid #eee;
+    width: fit-content;
+    /* margin-top: 20px; */
+    margin-left: 40px;
+}
+form button
+{
+    color: white;
+    width: 100%;
+    margin-top: 25px;
+    padding: 12px;
+    background-color: #333;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    letter-spacing: 1px;
+   
+}
+.error,
+.mistake
+{
+    color: red;
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    margin-top: 5px;
+    padding-left: 10px;
+    display: none;
+}
+.date .down .error
+,
+.date .down .mistake{
+    font-size:9px;
+}
+.card1
+{
+    position: fixed;
+    z-index: 5;
+    top: 80px;
+    left: 400px;
+    width: 350px;
+    height: 200px;
+    color: white;
+    font-size: 25px;
+    font-weight: 200;
+    white-space:4px;
+    border-radius: 8px;
+    padding: 100px 15px 15px 15px;
+    background-image: linear-gradient(45deg,rgb(162, 0, 255),rgb(204, 0, 255),rgb(128, 0, 255),rgba(0, 132, 255, 0.297));
+    text-align: center;
+}   
+.card1 .details
+{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 15px;
+    margin-top: 30px;
+    font-weight: 100;
+    font-size: 15px;
+}
+.card1::after
+{
+    content: "";
+    position: absolute;
+    background-color: #eee;
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    top: 15px;
+    left: 15px;
+}
+.card1::before
+{
+    content: "";
+    position: absolute;
+    border: 2px solid #eee;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    top: 25px;
+    left: 75px;
+}
+.card2
+{
+    position: fixed;
+    z-index: 5;
+    top: 260px;
+    left: 80px;
+    width: 350px;
+    height: 200px;
+    border-radius: 8px;
+    background-color: #eee;
+}
+.card2 .num
+{   
+    position: absolute;
+    text-align: left;
+    width: 300px;
+    height: 40px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 2px;
+    background-color: rgba(128, 128, 128, 0.479);
+    display: flex;
+    justify-content: flex-end;
+    line-height: 40px;
+    color: white;
+    padding-right: 10px;
+}
+.card2::after
+{
+    content: "";
+    background-color: rgba(0, 0, 0, 0.788);
+    position: absolute;
+    height: 40px;
+    width: 100%;
+    top: 20px;
+}
