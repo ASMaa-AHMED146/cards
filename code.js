@@ -15,10 +15,7 @@ let month_input=document.querySelector(".date .down #month");
 let customer_date=document.querySelector(".card1 .details .date");
 let year_input=document.querySelector(".date .down #year");
 let cv_input=document.querySelector(".date .down #cv");
-// console.log(cv_input);
 let customer_cv=document.querySelector(".card2 .num");
-
-
 
 
 form.addEventListener("submit",(e)=>{
@@ -33,7 +30,6 @@ form.addEventListener("submit",(e)=>{
 
 function cv(input)
 {  
-    console.log(input);
     if(input.length===3)
     {
         customer_cv.innerHTML=input;
@@ -49,9 +45,7 @@ function cv(input)
         })
     }
     else
-    {   console.log(cv_error);
-       
-        
+    {   
         cv_error.style.display="block";
         cv_input.style.borderColor="red";
 
@@ -62,7 +56,6 @@ function cv(input)
     }
     
 }
-
 
 
 
@@ -80,11 +73,11 @@ function Month(month,year)
     else if(year=="" && res)
     {   
         console.log(regex.test(month));
-        customer_date.innerHTML=month<10?`0${month}/00` : `${month}/00` ;
+        customer_date.innerHTML=month<10?`0${month}/00` : `${month}/00 `;
     }
 
 
-    if(month=="")
+    else if(month=="")
     {
         message3.style.display="block";
         month_input.style.borderColor="red";
@@ -100,14 +93,14 @@ function Month(month,year)
     else
     {
         document.querySelector(".date .down .month .mistake").style.display="block";
-        number_input.style.borderColor="red";
+        month_input.style.borderColor="red";
         // number_input.addEventListener("focus",function(){
         //     document.querySelector(".mistake").style.display="none";
         //     name_input.style.borderColor="#eee";
         // })
         document.addEventListener("click",()=>{
             document.querySelector(".date .mistake").style.display="none";
-            number_input.style.borderColor="#eee";
+            month_input.style.borderColor="#eee";
         })
     }
 }
@@ -117,7 +110,6 @@ function Name(name)
 {   
     if(name!=="")
     {
-        console.log(name);
         customer_name.innerHTML=name;
     }
     else
@@ -151,10 +143,10 @@ function Num(numb)
     {
         message2.style.display="block";
      number_input.style.borderColor="red";
-     number_input.addEventListener("focus",function(){
-        message2.style.display="none";
-        number_input.style.borderColor="#eee";
-    })
+    //  number_input.addEventListener("focus",function(){
+    //     message2.style.display="none";
+    //     number_input.style.borderColor="#eee";
+    // })
     document.addEventListener("click",()=>{
         message2.style.display="none";
         number_input.style.borderColor="#eee";
@@ -170,9 +162,6 @@ function Num(numb)
         // })
         document.addEventListener("click",()=>{
             document.querySelector(".mistake").style.display="none";
-            name_input.style.borderColor="#eee";
-        })
-    }
-    
+            name_input.style.borderColor="#eee";})
+        }
 }
-
